@@ -40,9 +40,8 @@ class MainTest {
         employees.add(new Employee("Smith", "Jhon", 30, "male",
                 "master", "developer", "D2"));
 
-        NullPointerException actual = Assertions.assertThrows(NullPointerException.class,
+        Assertions.assertThrows(NullPointerException.class,
                 () -> Main.searchBySurname(surname, name, employees));
-        Assertions.assertNull(actual.getMessage());
     }
 
     @Test
